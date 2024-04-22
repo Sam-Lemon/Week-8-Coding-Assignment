@@ -30,3 +30,63 @@ class Musician {
     }
     }
 }
+
+class Menu {
+    constructor() {
+        //I'm not sure what to put in here to make everything work right
+    }
+
+    start() {
+        let selection = this.mainMenuOptions();
+
+        while(selection != 0) {
+            switch (selection) {
+                case 'a':
+                    this.addPerson();
+                    break;
+                case 'b':
+                    this.viewDepartment();
+                    break;
+                case 'c':
+                    this.viewRole();
+                    break;
+                case 'd':
+                    this.viewSection();
+                    break;
+                case 'e':
+                    this.viewTechnician();
+                    break;
+                case 'f':
+                    this.viewActor();
+                    break;
+                case 'g':
+                    this.viewMusician();
+                    break;
+                case 'h':
+                    this.deletePerson();
+                    break;
+                case 'i':
+                    this.deleteDepartment();
+                    break;
+                case 'j':
+                    this.deleteRole();
+                    break;
+                case 'k':
+                    this.deleteSection();
+                    break;
+                case 'l':
+                    this.displayDepartment();
+                    break;
+                case 'm':
+                    this.displayRole();
+                    break;
+                case 'n':
+                    this.displaySection();
+                    break;
+                default:
+                    selection = 0;
+        }
+        selection = this.mainMenuOptions();
+    }
+    }
+}
