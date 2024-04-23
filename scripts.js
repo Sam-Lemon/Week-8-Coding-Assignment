@@ -24,10 +24,10 @@ class Musician {
     constructor (name, section) {
         this.name = name;
         this.section = section;
+    }
 
     describe() {
         return `${this.name} plays in the ${this.section} section.`
-    }
     }
 }
 
@@ -37,56 +37,100 @@ class Menu {
     }
 
     start() {
-        let selection = this.mainMenuOptions();
+        let selection = this.showMainMenuOptions();
 
         while(selection != 0) {
             switch (selection) {
-                case 'a':
+                case '1':
                     this.addPerson();
                     break;
-                case 'b':
+                case '2':
                     this.viewDepartment();
                     break;
-                case 'c':
+                case '3':
                     this.viewRole();
                     break;
-                case 'd':
+                case '4':
                     this.viewSection();
                     break;
-                case 'e':
-                    this.viewTechnician();
-                    break;
-                case 'f':
-                    this.viewActor();
-                    break;
-                case 'g':
-                    this.viewMusician();
-                    break;
-                case 'h':
+                case '5':
                     this.deletePerson();
-                    break;
-                case 'i':
-                    this.deleteDepartment();
-                    break;
-                case 'j':
-                    this.deleteRole();
-                    break;
-                case 'k':
-                    this.deleteSection();
-                    break;
-                case 'l':
-                    this.displayDepartment();
-                    break;
-                case 'm':
-                    this.displayRole();
-                    break;
-                case 'n':
-                    this.displaySection();
                     break;
                 default:
                     selection = 0;
         }
-        selection = this.mainMenuOptions();
+        selection = this.showMainMenuOptions();
+        }
     }
+
+    showMainMenuOptions() {
+        return prompt(`
+            1 - Add Person
+            2 - View Technical Department
+            3 - View Actor Role
+            4 - View Musician Section
+            5 - Delete Person
+            6 - Display Technical Department
+            7 - Display Actor Role
+            8 - Display Musician Section
+        `);
     }
+
+    addPersonMenuOptions() {
+        return prompt(`
+            1 - Add Technician
+            2 - Add Actor
+            3 - Add Musician
+            4 - back
+            ---------------------
+        `)
+    }
+
+    viewDepartmentMenuOptions (department) {
+        return prompt(`
+            1 - Audio
+            2 - Automation
+            3 - Carpentry
+            4 - Lighting
+            5 - Projections
+            6 - Props
+            7 - Rigging
+            8 - SFX
+            9 - Stage Management
+            10 - Wardrobe
+            11 - back
+        `)
+    }
+
+    viewRoleMenuOptions(role) {
+        return prompt(`
+            1 - Lead
+            2 - Ensemble
+            3 - Swing
+            4 - back
+        `)
+    }
+
+    viewSectionMenuOptions (section) {
+        return prompt(`
+            1 - Principle
+            2 - Woodwind
+            3 - Brass
+            4 - Strings
+            5 - Percussion
+            6 - back
+        `)
+    }
+
+    deletePerson(name) {
+        return prompt(`
+            1 - Delete Technician
+            2 - Delete Actor
+            3 - Delete Musician
+        `)
+    }
+
 }
+
+let menu = new Menu();
+menu.start();
