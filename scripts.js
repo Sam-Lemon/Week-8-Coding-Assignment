@@ -1,4 +1,4 @@
-class Technician {
+/*class Technician {
     constructor (name, department) {
         this.name = name;
         this.department = department;
