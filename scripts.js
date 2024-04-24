@@ -1,5 +1,5 @@
 /*
-* 
+* Person class has all the properties for each additional instance of person.
  */
 
 class Person {
@@ -15,10 +15,17 @@ class Person {
 
 }
 
+// Testing code //
 /*
 let me = new Person('Tommy Jones', 'grocer', 12.50)
 console.log(me.describe());
 */
+
+/**
+ * Using the addPerson method to add people to the staff array in the Department 
+ * class, after making sure that the input is an instance of Person above. 
+ * I also added an alert as well should the input not be correct.
+ */
 
 class Department {
     constructor (name) {
@@ -30,7 +37,7 @@ class Department {
         if (person instanceof Person) {
             this.staff.push(person);
         } else {
-            throw new Error (`Are you sure ${this.name} is a person?`);
+            alert (`Are you sure ${this.name} is a person?`);
         }
     }
 
@@ -38,6 +45,11 @@ class Department {
         return `${this.name} works in the ${position} department.`
     }
 }
+
+/**
+ * This is the beginning of the menu setup. Honestly, I don't understand what this
+ * is all about, need to ask a mentor or do some research.
+ */
 
 class Menu {
     constructor() {
@@ -70,6 +82,12 @@ class Menu {
 
         alert('Please Try Again');
     }
+
+/**
+ * showMainMenuOptions is the list of options that should pop up
+ * when you go to the live server, same with showDepartmentMenuOptions.
+ * I'm not sure why the template literal is there.
+ */
 
     showMainMenuOptions() {
         return prompt(`
