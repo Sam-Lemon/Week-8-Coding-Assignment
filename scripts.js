@@ -1,3 +1,72 @@
+class Person {
+    constructor (name, position, department) {
+        this.name = name;
+        this.position = position;
+        this.department = department;
+    }
+    
+}
+
+class Technician extends Person {
+    constructor (department) {
+        super(name, position, department);
+        this.department = department;
+        this.technicians = [];
+    }
+
+}
+
+class Actor extends Person {
+    constructor (department) {
+        super(name, position, department);
+        this.department = department;
+        this.actors = [];
+    }
+
+}
+
+class Musician extends Person {
+    constructor (department) {
+        super(name, position, department);
+        this.department = department;
+        this.actors = [];
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*class Technician {
     constructor (name, department) {
         this.name = name;
