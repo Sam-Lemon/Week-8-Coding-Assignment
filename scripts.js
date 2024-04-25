@@ -108,5 +108,28 @@ class Menu {
         `)
     }
 
+    createDepartment() {
+
+    }
+
+    viewDepartment() {
+
+    }
+
+    deleteDepartment() {
+
+    }
+
+    displayAllDepartments() {
+
+    }
+
+    addNewStaff() {
+
+    }
+
+    removeStaff() {
+        
+    }
 
 }
