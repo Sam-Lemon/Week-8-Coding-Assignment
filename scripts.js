@@ -1,4 +1,4 @@
-/**Person and Department class are the two objects we're working with for this project, 
+/**Person and Department class are two classes we're working with for this project, 
  * and within them are the properties of the objects. The dot notation identifies 
  * the specific class a property is pulled from.
  */
@@ -32,12 +32,6 @@ class Department {
         return `${this.name} works in the ${position} department.`
     }
 }
-
-/*
-let newDepartment = new Department("taco bell")
-newDepartment.addPerson(new Person("Tim", "Cook", 12.44))
-console.log(newDepartment.staff)
-*/
 
 /**The Menu class holds our menus. I used a switch to create the menu options, each
  * case is the input from the user and then that triggers the associated method which is
@@ -102,10 +96,10 @@ class Menu {
     }
 
 
-    /**Below are all the methods associated with the Menu class. displayAllDepartments 
-     * creates a string of departments, iterates through the departments array and shows
-     * them all to the user.
-     */
+/**Below are all the methods associated with the Menu class. displayAllDepartments 
+ * creates a string of departments, iterates through the departments array and shows
+ * them all to the user.
+ */
     displayAllDepartments() {
         let departmentString = '';
         for (let i = 0; i < this.departments.length; i++) {
